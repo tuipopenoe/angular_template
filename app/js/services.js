@@ -1,6 +1,7 @@
+// © Tui Popenoe, 2014
 'use strict';
 
-// Services
+// Services Module
 
 var tuipopenoeServices = angular.module('tuipopenoeServices', ['ngResource']);
 
