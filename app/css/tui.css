@@ -1,0 +1,86 @@
+body {
+    background: url('/app/img/tuipopenoeApp_background.png') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #f2f2f2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color: #fff;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #fff;
+}
+
+.well {
+    background-color: #222;
+    border: 2px solid #000;
+    border-radius: 1px;
+}
+
+.clearblock {
+	background-color:rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.fixedwell {
+    height: 420px;
+}
+
+.topblock {
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+.btn-lg,
+.btn,
+.btn-sm {
+    border-radius: 1px;
+}
+
+hr {
+    border-top: #555;
+}
+
+footer {
+    color: #777;
+}
+
+legend {
+    color: #777;
+}
+
+.navbar-inverse .navbar-nav > li > form {
+    padding-top: 15px;
+}
+
+.navbar-inverse .navbar-nav > li > form > a {
+    color: #999;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-inverse .navbar-nav > li > form > a:hover,
+.navbar-inverse .navbar-nav > li > form > a:focus{
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+}
