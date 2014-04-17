@@ -22,13 +22,17 @@ tuipopenoeApp.config(['$routeProvider',
                 templateUrl: 'templates/resume.html',
                 controller: 'ResumeCtrl'
             }).
-            when('/education', {
-                templateUrl: 'templates/education.html',
-                controller: 'EducationCtrl'
+            when('/about', {
+                templateUrl: 'templates/about.html',
+                controller: 'AboutCtrl'
             }).
             when('/code', {
                 templateUrl: 'templates/code.html',
                 controller: 'CodeCtrl'
+            }).
+            when('/contact', {
+                templateUrl: 'templates/contact.html',
+                contorller: 'ContactCtrl'
             }).
             otherwise({
                 redirectTo: '/home'

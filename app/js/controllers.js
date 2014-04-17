@@ -27,9 +27,15 @@ tuipopenoeControllers.controller('ResumeDetailCtrl', ['$scope', '$routeParams', 
         }
     }]);
 
-tuipopenoeControllers.controller('EducationCtrl', ['$scope', 'Education',
-    function($scope, Education){
-        $scope.items = Education.query();
+tuipopenoeControllers.controller('AboutCtrl', ['$scope', '$routeParams', 
+    'About',
+    function($scope, $routeParams, About){
+
+    }]);
+
+tuipopenoeControllers.controller('ContactCtrl', ['$scope', 'Contact',
+    function($scope, Contact){
+        $scope.items = Contact.query();
         $scope.orderProp = 'date';
     }]);
 
