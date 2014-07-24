@@ -14,6 +14,10 @@ var tuipopenoeApp = angular.module('tuipopenoeApp',[
 tuipopenoeApp.config(['$routeProvider',
     function($routeProvider){
         $routeProvider.
+            when('/', {
+                templateUrl: 'templates/home.html',
+                controller: 'HomeCtrl'
+            }).
             when('/home', {
                 templateUrl: 'templates/home.html',
                 controller: 'HomeCtrl'
@@ -35,6 +39,6 @@ tuipopenoeApp.config(['$routeProvider',
                 contorller: 'HomeCtrl'
             }).
             otherwise({
-                redirectTo: '/home'
+                redirectTo: '/'
             });
     }]);
