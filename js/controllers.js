@@ -7,7 +7,7 @@ var tuipopenoeControllers = angular.module('tuipopenoeControllers', []);
 
 tuipopenoeControllers.controller('HomeCtrl', ['$scope', 'Home',
     function($scope, Home){
-        $scope.links = Home.query();
+        $scope.items = Home.query();
     }]);
 
 tuipopenoeControllers.controller('ResumeCtrl', ['$scope', 'Resume',
@@ -25,22 +25,4 @@ tuipopenoeControllers.controller('ResumeDetailCtrl', ['$scope', '$routeParams', 
         $scope.setImage = function(imageUrl){
             $scope.mainImageUrl = imageUrl;
         }
-    }]);
-
-tuipopenoeControllers.controller('AboutCtrl', ['$scope', '$routeParams', 
-    'About',
-    function($scope, $routeParams, About){
-
-    }]);
-
-tuipopenoeControllers.controller('ContactCtrl', ['$scope', 'Contact',
-    function($scope, Contact){
-        $scope.items = Contact.query();
-        $scope.orderProp = 'date';
-    }]);
-
-tuipopenoeControllers.controller('CodeCtrl', ['$scope', 'Code',
-    function($scope, Code){
-        $scope.items = Code.query();
-        $scope.orderProp = 'date';
     }]);

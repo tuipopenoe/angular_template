@@ -24,15 +24,15 @@ tuipopenoeApp.config(['$routeProvider',
             }).
             when('/about', {
                 templateUrl: 'templates/about.html',
-                controller: 'AboutCtrl'
+                controller: 'HomeCtrl'
             }).
             when('/code', {
                 templateUrl: 'templates/code.html',
-                controller: 'CodeCtrl'
+                controller: 'HomeCtrl'
             }).
             when('/contact', {
                 templateUrl: 'templates/contact.html',
-                contorller: 'ContactCtrl'
+                contorller: 'HomeCtrl'
             }).
             otherwise({
                 redirectTo: '/home'

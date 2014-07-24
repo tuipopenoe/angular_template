@@ -1,16 +1,16 @@
 <!-- © Tui Popenoe, 2014 -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang='en' ng-app='tuipopenoeApp'>
     <head>
         <meta charset='utf-8'>
         <title>tuipopenoe.com</title>        
         <!-- Load Bootstrap from CDN -->
-        <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
         <!-- Load animation CSS -->
         <link rel='stylesheet' href='css/animations.css'>
         <!-- Load site specific CSS -->
         <link rel='stylesheet' href='css/tui.css'>
-        <!-- Roboto Fonts -->
+        <!-- Load Roboto Fonts from CDN -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
         <!-- Favicon -->
         <link rel='icon' href='img/favicon.ico'>
@@ -18,7 +18,7 @@
         <!-- Load jQuery from CDN -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <!-- Load Angular from CDN -->
-        <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js'></script>
+        <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js'></script>
         <!-- Load Angular libraries -->
         <script src='lib/angular/angular-animate.js'></script>
         <script src='lib/angular/angular-resource.js'></script>
@@ -33,17 +33,6 @@
     </head>
     <body>        
         <div class='view-container'>
-
-            <div class='masthead'>
-                    <ul class="nav masthead-nav">
-                        <li><a href="#/home">Home</a></li>
-                        <li><a href='#/about'>About</a></li>
-                        <li><a href='#/resume'>Resumé</a></li>
-                        <li><a href='#/code'>Code</a></li>
-                        <li><a href='#/contact'>Contact</a></li>
-                    </ul>
-            </div>
-
             <div ng-view class='view-frame'>
             </div>
         </div>
