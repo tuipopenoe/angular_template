@@ -3,7 +3,7 @@
 
 // Animations Module
 
-var tuipopenoeAnimations = angular.module('tuipopenoeAnimations', ['ngAnimate']);
+var tuipopenoeAnimations = angular.module('tui_animations', ['ngAnimate']);
 
 tuipopenoeAnimations.animation('.item', function(){
     var animateUp = function(element, className, done){

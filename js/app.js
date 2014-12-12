@@ -3,11 +3,8 @@
 
 // App Module
 var tuipopenoe_dotcom = angular.module('tui_app',[
-    'ngRoute',
-    'tuipopenoeAnimations',
-    'tuipopenoeControllers',
-    'tuipopenoeFilters',
-    'tuipopenoeServices'
+    'ui.router',
+    'tui_animations'
     ]);
 
 tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
@@ -15,18 +12,18 @@ tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html'
+            templateUrl: 'templates/partial-home.html'
         })
         .state('about', {
             url: '/about',
-            templateUrl: 'partial-about.html'
+            templateUrl: 'templates/partial-about.html'
         })
         .state('code', {
             url: '/code',
-            templateUrl: 'partial-code.html'
+            templateUrl: 'templates/partial-code.html'
         })
         .state('resume', {
             url: '/resume',
-            templateUrl: 'partial-resume.html'
+            templateUrl: 'templates/partial-resume.html'
         })
     });
