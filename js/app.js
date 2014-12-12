@@ -2,8 +2,7 @@
 'use strict';
 
 // App Module
-
-var tuipopenoeApp = angular.module('tuipopenoeApp',[
+var tuipopenoe_dotcom = angular.module('tui_app',[
     'ngRoute',
     'tuipopenoeAnimations',
     'tuipopenoeControllers',
@@ -11,34 +10,23 @@ var tuipopenoeApp = angular.module('tuipopenoeApp',[
     'tuipopenoeServices'
     ]);
 
-tuipopenoeApp.config(['$routeProvider',
-    function($routeProvider){
-        $routeProvider.
-            when('/', {
-                templateUrl: 'templates/home.html',
-                controller: 'HomeCtrl'
-            }).
-            when('/home', {
-                templateUrl: 'templates/home.html',
-                controller: 'HomeCtrl'
-            }).
-            when('/resume', {
-                templateUrl: 'templates/resume.html',
-                controller: 'ResumeCtrl'
-            }).
-            when('/about', {
-                templateUrl: 'templates/about.html',
-                controller: 'HomeCtrl'
-            }).
-            when('/code', {
-                templateUrl: 'templates/code.html',
-                controller: 'HomeCtrl'
-            }).
-            when('/contact', {
-                templateUrl: 'templates/contact.html',
-                contorller: 'HomeCtrl'
-            }).
-            otherwise({
-                redirectTo: '/'
-            });
-    }]);
+tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/home');
+    $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: 'partial-home.html'
+        })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'partial-about.html'
+        })
+        .state('code', {
+            url: '/code',
+            templateUrl: 'partial-code.html'
+        })
+        .state('resume', {
+            url: '/resume',
+            templateUrl: 'partial-resume.html'
+        })
+    });
