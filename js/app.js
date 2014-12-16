@@ -12,18 +12,70 @@ tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'templates/partial-home.html'
+            views: {
+                header: {
+                    templateUrl: 'templates/partial-header.html',
+                    controller: function($scope) {}
+                },
+                content: {
+                    templateUrl: 'templates/partial-home.html',
+                    controller: function($scope) {}
+                },
+                footer: {
+                    templateUrl: 'templates/partial-footer.html',
+                    controller: function($scope) {}
+                }
+            }
         })
         .state('about', {
             url: '/about',
-            templateUrl: 'templates/partial-about.html'
+            views: {
+                header: {
+                    templateUrl: 'templates/partial-header.html',
+                    controller: function($scope) {}
+                },
+                content: {
+                    templateUrl: 'templates/partial-about.html',
+                    controller: function($scope) {}
+                },
+                footer: {
+                    templateUrl: 'templates/partial-footer.html',
+                    controller: function($scope) {}
+                }
+            }
         })
         .state('code', {
             url: '/code',
-            templateUrl: 'templates/partial-code.html'
+            views: {
+                header: {
+                    templateUrl: 'templates/partial-header.html',
+                    controller: function($scope) {}
+                },
+                content: {
+                    templateUrl: 'templates/partial-code.html',
+                    controller: function($scope) {}
+                },
+                footer: {
+                    templateUrl: 'templates/partial-footer.html',
+                    controller: function($scope) {}
+                }
+            }
         })
         .state('resume', {
             url: '/resume',
-            templateUrl: 'templates/partial-resume.html'
+            views: {
+                header: {
+                    templateUrl: 'templates/partial-header.html',
+                    controller: function($scope) {}
+                },
+                content: {
+                    templateUrl: 'templates/partial-resume.html',
+                    controller: function($scope) {}
+                },
+                footer: {
+                    templateUrl: 'templates/partial-footer.html',
+                    controller: function($scope) {}
+                }
+            }
         })
     });

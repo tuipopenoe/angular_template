@@ -4,6 +4,7 @@ html{
 
 /* Space out content a bit */
 body {
+  background: url('img/background.png');
   padding-top: 20px;
   padding-bottom: 20px;
 }
