@@ -2,12 +2,12 @@
 'use strict';
 
 // App Module
-var tuipopenoe_dotcom = angular.module('tui_app',[
+var angular_template = angular.module('angular_app',[
     'ui.router',
-    'tui_animations'
+    'angular_animations'
     ]);
 
-tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
+angular_template.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
     $stateProvider
         .state('home', {
@@ -27,15 +27,15 @@ tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
                 }
             }
         })
-        .state('about', {
-            url: '/about',
+        .state('page1', {
+            url: '/page1',
             views: {
                 header: {
                     templateUrl: 'templates/partial-header.html',
                     controller: function($scope) {}
                 },
                 content: {
-                    templateUrl: 'templates/partial-about.html',
+                    templateUrl: 'templates/partial-page1.html',
                     controller: function($scope) {}
                 },
                 footer: {
@@ -44,15 +44,15 @@ tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
                 }
             }
         })
-        .state('code', {
-            url: '/code',
+        .state('page2', {
+            url: '/page2',
             views: {
                 header: {
                     templateUrl: 'templates/partial-header.html',
                     controller: function($scope) {}
                 },
                 content: {
-                    templateUrl: 'templates/partial-code.html',
+                    templateUrl: 'templates/partial-page2.html',
                     controller: function($scope) {}
                 },
                 footer: {
@@ -61,15 +61,15 @@ tuipopenoe_dotcom.config(function($stateProvider, $urlRouterProvider){
                 }
             }
         })
-        .state('resume', {
-            url: '/resume',
+        .state('page3', {
+            url: '/page3',
             views: {
                 header: {
                     templateUrl: 'templates/partial-header.html',
                     controller: function($scope) {}
                 },
                 content: {
-                    templateUrl: 'templates/partial-resume.html',
+                    templateUrl: 'templates/partial-page3.html',
                     controller: function($scope) {}
                 },
                 footer: {

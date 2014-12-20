@@ -3,9 +3,9 @@
 
 // Animations Module
 
-var tuipopenoeAnimations = angular.module('tui_animations', ['ngAnimate']);
+var angular_animations = angular.module('angular_animations', ['ngAnimate']);
 
-tuipopenoeAnimations.animation('.item', function(){
+angular_animations.animation('.item', function(){
     var animateUp = function(element, className, done){
         if(className != 'active'){
             return;
