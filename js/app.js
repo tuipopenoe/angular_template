@@ -4,10 +4,14 @@
 // App Module
 var angular_template = angular.module('angular_app',[
     'ui.router',
-    'angular_animations'
+    'angular_animations',
+    'uiGmapgoogle-maps'
     ]);
 
-angular_template.config(function($stateProvider, $urlRouterProvider){
+angular_template.config(function($stateProvider,
+                                 $urlRouterProvider,
+                                 $locationProvider){
+    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/home');
     $stateProvider
         .state('home', {
