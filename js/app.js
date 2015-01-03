@@ -14,70 +14,60 @@ angular_template.config(function($stateProvider,
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/home');
     $stateProvider
+        .state('root', {
+            abstract: true,
+            views:{
+                '' : {templateUrl: 'templates/_layout.html'},
+                'header@root':{
+                    templateUrl: 'templates/_header.html',
+                    controller: function($scope){}
+                },
+                'content@root':{
+                    templateUrl: 'templates/_home.html',
+                    controller: function($scope){}
+                },
+                'footer@root': {
+                    templateUrl: 'templates/_footer.html',
+                    controller: function($scope){}
+                }
+            }
+        })
         .state('home', {
+            parent: 'root',
             url: '/home',
             views: {
-                header: {
-                    templateUrl: 'templates/partial-header.html',
-                    controller: function($scope) {}
-                },
                 content: {
-                    templateUrl: 'templates/partial-home.html',
-                    controller: function($scope) {}
-                },
-                footer: {
-                    templateUrl: 'templates/partial-footer.html',
+                    templateUrl: 'templates/_home.html',
                     controller: function($scope) {}
                 }
             }
         })
         .state('page1', {
+            parent: 'root',
             url: '/page1',
             views: {
-                header: {
-                    templateUrl: 'templates/partial-header.html',
-                    controller: function($scope) {}
-                },
                 content: {
-                    templateUrl: 'templates/partial-page1.html',
-                    controller: function($scope) {}
-                },
-                footer: {
-                    templateUrl: 'templates/partial-footer.html',
+                    templateUrl: 'templates/_page1.html',
                     controller: function($scope) {}
                 }
             }
         })
         .state('page2', {
+            parent: 'root',
             url: '/page2',
             views: {
-                header: {
-                    templateUrl: 'templates/partial-header.html',
-                    controller: function($scope) {}
-                },
                 content: {
-                    templateUrl: 'templates/partial-page2.html',
-                    controller: function($scope) {}
-                },
-                footer: {
-                    templateUrl: 'templates/partial-footer.html',
+                    templateUrl: 'templates/_page2.html',
                     controller: function($scope) {}
                 }
             }
         })
         .state('page3', {
+            parent: 'root',
             url: '/page3',
             views: {
-                header: {
-                    templateUrl: 'templates/partial-header.html',
-                    controller: function($scope) {}
-                },
                 content: {
-                    templateUrl: 'templates/partial-page3.html',
-                    controller: function($scope) {}
-                },
-                footer: {
-                    templateUrl: 'templates/partial-footer.html',
+                    templateUrl: 'templates/_page3.html',
                     controller: function($scope) {}
                 }
             }
