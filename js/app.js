@@ -62,13 +62,30 @@ angular_template.config(function($stateProvider,
                 }
             }
         })
-        .state('page3', {
+        .state('location', {
             parent: 'root',
-            url: '/page3',
+            url: '/location',
             views: {
                 content: {
-                    templateUrl: 'templates/_page3.html',
-                    controller: function($scope) {}
+                    templateUrl: 'templates/_location.html',
+                    controller: function($scope) {
+                        $scope.options = {scrollwheel: false};
+                        $scope.map = {
+                            center: {
+                                latitude: 30.266585,
+                                longitude: -97.742905
+                            },
+                            zoom:15
+                        };
+                        $scope.marker = {
+                            id: 0,
+                            coords: {
+                            latitude: 30.266585,
+                            longitude: -97.742905
+                            },
+                            options: { draggable: false }
+                        };
+                    }
                 }
             }
         })
