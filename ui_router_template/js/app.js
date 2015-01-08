@@ -4,7 +4,6 @@
 // App Module
 var angular_template = angular.module('angular_app',[
     'ui.router',
-    'angular_animations',
     'uiGmapgoogle-maps'
     ]);
 
