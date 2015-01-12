@@ -2,7 +2,7 @@
 var slick_js_template = angular.module('slick_js_template', ['slick']);
 
 angular.module('slick_js_template')
-  .controller('MainCtrl', function($scope, $timeout){
+  .controller('MainCtrl', function($scope){
       $scope.languages = [
         'ECMAScript6',
         'Java',
