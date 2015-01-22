@@ -1,0 +1,103 @@
+<!-- © Tui Popenoe, 2014 -->
+<!DOCTYPE html>
+<html lang='en' ng-app='base' ng-controller='base'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href='/'>
+        <title>Base Angular Template</title>
+        <!-- font awesome from BootstrapCDN -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- Load Bootstrap CSS from CDN -->
+        <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <!-- Load Roboto Fonts from CDN -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
+        <!-- Favicon -->
+        <link rel='icon' href='img/favicon.ico'>
+        <!-- Load jQuery from CDN -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Load Angular from CDN -->
+        <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js'></script>
+        <!-- Load UI Router from CDN
+        <script src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js'></script> -->
+        <!-- Load Google Maps API from CDN
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+        <!-- Load lodash.js from CDN 
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.compat.js'></script>-->
+        <!-- Load Google Maps Angular from CDN
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-google-maps/2.0.12/angular-google-maps.min.js'></script> -->
+        <!-- Load Application JS files -->
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <script src='js/app.js'></script>
+    </head>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+            ng-click="menuCollapsed = ! menuCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            ngbp
+            <small>
+              <a href="http://github.com/ngbp/ngbp/blob/v<%= version %>-release/CHANGELOG.md">
+              </a>
+            </small>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active">
+              <a href ui-sref="home">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="about">
+                <i class="fa fa-info-circle"></i>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ngbp/ngbp#readme">
+                <i class="fa fa-book"></i>
+                Location
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ngbp/ngbp">
+                <i class="fa fa-github-alt"></i>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ngbp/ngbp/issues">
+                <i class="fa fa-comments"></i>
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" ui-view="main"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <ul class="social">
+            <li><a target="_blank" href="http://gplus.to/joshdmiller"><i class="fa fa-google-plus-sign"></i></a></li>
+            <li><a target="_blank" href="http://twitter.com/joshdmiller"><i class="fa fa-twitter-sign"></i></a></li>
+            <li><a target="_blank" href="http://linkedin.com/in/joshdmiller"><i class="fa fa-linkedin-sign"></i></a></li>
+            <li><a target="_blank" href="http://github.com/ngbp/ngbp"><i class="fa fa-github-sign"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
