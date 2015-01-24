@@ -2,31 +2,31 @@
 'use strict';
 
 // App Module
-var angular_template = angular.module('angular_app',[
+var angular_ui_router_template = angular.module('angular_ui_router_template',[
     'ui.router',
     'uiGmapgoogle-maps'
     ]);
 
-angular_template.config(function($stateProvider,
-                                 $urlRouterProvider,
-                                 $locationProvider){
-    $locationProvider.html5Mode(true);
+var route_config = ['$urlRouterProvider', function($urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
+}];
+
+var state_config = ['$stateProvider', function($stateProvider){
     $stateProvider
         .state('root', {
             abstract: true,
             views:{
-                '' : {templateUrl: 'templates/_layout.html'},
+                '' : {templateUrl: 'tpl/_root.html'},
                 'header@root':{
-                    templateUrl: 'templates/_header.html',
+                    templateUrl: 'tpl/_header.html',
                     controller: function($scope){}
                 },
                 'content@root':{
-                    templateUrl: 'templates/_home.html',
+                    templateUrl: 'tpl/_home.html',
                     controller: function($scope){}
                 },
                 'footer@root': {
-                    templateUrl: 'templates/_footer.html',
+                    templateUrl: 'tpl/_footer.html',
                     controller: function($scope){}
                 }
             }
@@ -36,7 +36,7 @@ angular_template.config(function($stateProvider,
             url: '/home',
             views: {
                 content: {
-                    templateUrl: 'templates/_home.html',
+                    templateUrl: 'tpl/_home.html',
                     controller: function($scope) {}
                 }
             }
@@ -46,7 +46,7 @@ angular_template.config(function($stateProvider,
             url: '/page1',
             views: {
                 content: {
-                    templateUrl: 'templates/_page1.html',
+                    templateUrl: 'tpl/_page1.html',
                     controller: function($scope) {}
                 }
             }
@@ -56,7 +56,7 @@ angular_template.config(function($stateProvider,
             url: '/page2',
             views: {
                 content: {
-                    templateUrl: 'templates/_page2.html',
+                    templateUrl: 'tpl/_page2.html',
                     controller: function($scope) {}
                 }
             }
@@ -66,7 +66,7 @@ angular_template.config(function($stateProvider,
             url: '/location',
             views: {
                 content: {
-                    templateUrl: 'templates/_location.html',
+                    templateUrl: 'tpl/_location.html',
                     controller: function($scope) {
                         $scope.options = {scrollwheel: false};
                         $scope.map = {
@@ -88,4 +88,24 @@ angular_template.config(function($stateProvider,
                 }
             }
         })
-    });
+}];
+
+var html5_config = ['$locationProvider', function($locationProvider){
+    /*$locationProvider.html5Mode(true).hashPrefix('!');*/
+}];
+
+angular_ui_router_template
+    .config(route_config)
+    .config(state_config)
+    .config(html5_config);
+
+// Cache templates
+angular_ui_router_template.run( function($templateCache, $http){
+    $http.get('../tpl/_header.html', {cache: $templateCache});
+    $http.get('../tpl/_home.html', {cache: $templateCache});
+    $http.get('../tpl/_footer.html', {cache: $templateCache});
+    $http.get('../tpl/_root.html', {cache: $templateCache});
+    $http.get('../tpl/_location.html', {cache: $templateCache});
+    $http.get('../tpl/_page1.html', {cache: $templateCache});
+    $http.get('../tpl/_page2.html', {cache: $templateCache});
+});
