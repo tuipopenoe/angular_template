@@ -20,6 +20,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 # Build Sassy CSS 
 gem 'sass', '3.2.19'
+#Add Bower-Rails
+gem 'bower-rails'
 # Rspec for testing similar to Jasmine
 group :test, :development do 
     gem "rspec-rails", "~> 2.0"
